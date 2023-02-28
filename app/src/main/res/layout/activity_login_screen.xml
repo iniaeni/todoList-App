@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginScreenActivity"
+    android:background="@color/white">
+
+<!--    image logo-->
+    <ImageView
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:paddingVertical="25dp"
+        android:src="@drawable/logo"
+
+        ></ImageView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginHorizontal="25dp"
+       >
+
+<!--    title log in-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/title_login"
+        android:layout_centerInParent="true"
+        android:textSize="30dp"
+        android:textColor="@color/black"
+        android:layout_marginVertical="5dp"
+        ></TextView>
+
+<!--desc login-->
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/desc_login"
+        android:layout_below="@+id/title"
+        android:textColor="@color/white_text"
+        ></TextView>
+
+
+<!--    email-->
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email_login"
+        android:layout_below="@+id/desc"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="3dp"
+        ></TextView>
+
+
+<!-- Enter your email-->
+    <EditText
+        android:id="@+id/yourmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mail"
+        android:background="@drawable/input"
+        android:hint="@string/input"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:inputType="textEmailAddress"
+        ></EditText>
+
+
+<!--    Password -->
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/password_login"
+        android:layout_below="@+id/yourmail"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="3dp"
+        ></TextView>
+
+<com.google.android.material.textfield.TextInputLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:passwordToggleEnabled="true">
+
+
+    <EditText
+        android:id="@+id/yourpw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:background="@drawable/input"
+        android:hint="@string/input_pw"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:inputType="textPassword"
+
+        ></EditText>
+
+</com.google.android.material.textfield.TextInputLayout>
+<!--    Enter your password-->
+
+
+
+<!--    remember me -->
+    <CheckBox
+        android:id="@+id/CheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/yourpw"
+        android:text="@string/remember_login"
+        android:textColor="@color/black"
+
+        />
+
+
+
+<!--    forgot password -->
+<!--    <TextView-->
+<!--        android:id="@+id/forgot"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/forgot_pw_login"-->
+<!--        android:layout_toRightOf="@+id/CheckBox"-->
+<!--        android:layout_below="@+id/yourpw"-->
+<!--        android:textSize="15dp"-->
+<!--        android:textColor="@color/blue_forgot"-->
+<!--        android:layout_marginStart="200dp"-->
+<!--    -->
+
+<!--        ></TextView>-->
+
+
+<!--    button login-->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/CheckBox"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:backgroundTint="@color/blue2"
+            android:text="@string/login"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
